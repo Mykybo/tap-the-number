@@ -16,6 +16,7 @@ import styles from './index.style';
 type Props = {
   navigateToPlayground: () => any,
   navigateToEndgame: () => any,
+  navigateToMenu: () => any,
 };
 
 type State = {
@@ -27,6 +28,7 @@ type State = {
 
 @inject(allStores => ({
   navigateToPlayground: allStores.router.navigateToPlayground,
+  navigateToMenu: allStores.router.navigateToMenu,
   navigateToEndgame: allStores.router.navigateToEndgame,
 }))
 @observer
@@ -34,6 +36,7 @@ export default class App extends Component<Props, Props, State> {
   static defaultProps = {
     navigateToPlayground: () => null,
     navigateToEndgame: () => null,
+    navigateToMenu: () => null,
   };
 
   _headerRef: any;
@@ -69,6 +72,14 @@ export default class App extends Component<Props, Props, State> {
       await Promise.all([this._headerRef.fadeOutLeft(400), this._bodyRef.fadeOutRight(400)]);
     }
     this.props.navigateToPlayground();
+  };
+
+  _handleNavigateToMenu = async () => {
+    this.setState({ hasPressedButton: true }); // Prevents button presses while animating to the new screen
+    if (this._headerRef && this._bodyRef) {
+      await Promise.all([this._headerRef.fadeOutLeft(400), this._bodyRef.fadeOutRight(400)]);
+    }
+    this.props.navigateToMenu();
   };
 
   render() {
@@ -110,6 +121,14 @@ export default class App extends Component<Props, Props, State> {
               onPressOut={this._handleButtonPress}
               isEnabled={!hasPressedButton}
               playSound={audioService.playButtonSound}
+            />
+            <Tile
+              backgroundColor={tileColor}
+              text={'Menu'}
+              style={styles.button}
+              textStyle={styles.buttonText}
+              onPressOut={this._handleNavigateToMenu}
+              isEnabled={!hasPressedButton}
             />
           </View>}
       </View>

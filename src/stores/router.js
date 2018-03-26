@@ -4,13 +4,16 @@
  */
 import { observable } from 'mobx';
 
-export type Screen = 'HOME' | 'PLAYGROUND' | 'ENDGAME';
+export type Screen = 'HOME' | 'PLAYGROUND' | 'ENDGAME' | 'LOGIN' | 'MENU';
 
 export default class RouterStore {
-  @observable currentScreen: Screen = 'HOME';
+  @observable currentScreen: Screen = 'LOGIN';
 
   navigateToHome = () => {
     this.currentScreen = 'HOME';
+  };
+  navigateToMenu = () => {
+    this.currentScreen = 'MENU';
   };
 
   navigateToPlayground = () => {

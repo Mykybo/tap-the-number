@@ -1637,7 +1637,7 @@ eslint-plugin-jsx-a11y@^2.2.3:
     jsx-ast-utils "^1.0.0"
     object-assign "^4.0.1"
 
-eslint-plugin-prettier@^2.0.0:
+eslint-plugin-prettier@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.0.0.tgz#8d117dcbe1e9fdafaf593166480c1ad79b8d3125"
   dependencies:
@@ -3480,7 +3480,7 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^0.16.0:
+prettier@0.16.0:
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-0.16.0.tgz#35d3df5672831b3622e44d88ab18c1f175d6d90c"
   dependencies:
@@ -4343,7 +4343,7 @@ utils-merge@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.0.tgz#0294fb922bb9375153541c4f7096231f287c8af8"
 
-uuid@^3.0.0, uuid@^3.0.1:
+uuid@3.0.1, uuid@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 
