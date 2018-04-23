@@ -1,5 +1,5 @@
 /* @flow */
 import { AppRegistry } from 'react-native';
-import TapTheNumber from './src';
+import TapToPlay from './src';
 
-AppRegistry.registerComponent('TapTheNumber', () => TapTheNumber);
+AppRegistry.registerComponent('TapToPlay', () => TapToPlay);

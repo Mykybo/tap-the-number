@@ -6,12 +6,12 @@ import React, { Component } from 'react';
 import { StatusBar, Text } from 'react-native';
 import { Image, View } from 'react-native-animatable';
 import { inject, observer } from 'mobx-react/native';
-import backgroundImg from 'src/images/bg.jpg';
-import Playground from 'src/containers/Playground';
-import Home from 'src/containers/Home';
-import Endgame from 'src/containers/Endgame';
-import Menu from 'src/containers/Menu';
-import Login from 'src/containers/Login';
+import backgroundImg from '../../images/bg.jpg';
+import Playground from '../../containers/Playground';
+import Home from '../../containers/Home';
+import Endgame from '../../containers/Endgame';
+import Menu from '../../containers/Menu';
+import Login from '../../containers/Login';
 import styles from './index.style';
 
 type Props = {
